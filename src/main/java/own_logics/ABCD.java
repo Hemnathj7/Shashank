@@ -36,7 +36,7 @@ import org.springframework.stereotype.Component;
 @Component("LIC9286_PJT1001_PE_NLP72284797-0625-42fe-a680-a8d7aaa95ba7")
 public class ABCD implements Nlp {
 	@ReturnType(name = "output", type = "java.lang.String")
-
+//
 	@Override
 	public List<String> getTestParameters() throws NlpException {
 		List<String> params = new ArrayList<>();
