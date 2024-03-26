@@ -6,7 +6,10 @@ import java.util.Map;
 import com.tyss.optimize.nlp.util.NlpRequestModel;
 
 public class UnitTest {
-
+public static void dummy()
+	{
+		System.out.println("Dummy Line");
+	}
 	public static void main(String[] args) throws Exception {
 		// TODO Auto-generated method stub
 		NonStatic jvs=new NonStatic();
