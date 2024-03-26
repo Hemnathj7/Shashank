@@ -1,0 +1,34 @@
+import java.io.IOException;
+import java.util.List;
+
+import org.kohsuke.github.GHCommit;
+import org.kohsuke.github.GHRepository;
+import org.kohsuke.github.GitHub;
+import org.kohsuke.github.GitHubBuilder;
+
+public class GitHubChangesTracker {
+
+    public static void main(String[] args) throws IOException {
+        // Replace with your GitHub access token
+        String accessToken = "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";
+
+        // Initialize a GitHub client
+        GitHub github = new GitHubBuilder().withOAuthToken(accessToken).build();
+
+      //  https://github.com/Hemnathj7/FirstRepoIntelliJ.git
+        	GHRepository repository = github.getRepository("Hemnathj7/Shashank");
+
+        // Get the latest commit
+        GHCommit latestCommit = repository.listCommits().iterator().next();
+
+        // Get the list of files in the latest commit
+        List<GHCommit.File> files = latestCommit.getFiles();
+
+        // Output the paths of added files
+        for (GHCommit.File file : files) {
+            if (file.getStatus().equals("added") && file.getFileName().endsWith(".java")) {
+                System.out.println("New Java file added: " + file.getFileName());
+            }
+        }
+    }
+}
