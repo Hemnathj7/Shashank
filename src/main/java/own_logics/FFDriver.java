@@ -11,6 +11,7 @@ import com.tyss.optimize.nlp.util.annotation.InputParam;
 import com.tyss.optimize.nlp.util.annotation.InputParams;
 import com.tyss.optimize.nlp.util.annotation.ReturnType;
 
+import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.appmanagement.BaseActivateApplicationOptions;
 import io.appium.java_client.ios.IOSDriver;
 import io.github.bonigarcia.wdm.WebDriverManager;
@@ -45,7 +46,7 @@ public class FFDriver implements Nlp {
           NlpResponseModel nlpResponseModel = new NlpResponseModel();
           Map<String, Object> attributes = nlpRequestModel.getAttributes();
     //      XCUIApplication
-          IOSDriver d=null;
+          AndroidDriver d=null;
       
        
           try {
