@@ -11,7 +11,7 @@ public class GitHubChangesTrackerr {
 
     public static void main(String[] args) throws IOException {
         // Replace with your GitHub access token
-        String accessToken = "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";
+        String accessToken = "Token_Comes_Here";
 
         // Initialize a GitHub client
         GitHub github = new GitHubBuilder().withOAuthToken(accessToken).build();
